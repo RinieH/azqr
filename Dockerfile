@@ -10,5 +10,6 @@ ARG TARGETARCH=amd64
 # Copy the pre-built binary from local build to /usr/local/bin
 COPY bin/linux_${TARGETARCH}/azqr /usr/local/bin/azqr
 
-# Set the entrypoint
+# Set the entrypoint with mcp server as default
 ENTRYPOINT ["/usr/local/bin/azqr"]
+CMD ["mcp"]
